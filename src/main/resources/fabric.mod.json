@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "bindme",
+	"version": "${version}",
+	"name": "BindMe",
+	"description": "Key-Bind Whatever You Want",
+	"authors": [
+		"ttrafford"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/bindme/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "ttrafford.bindme.BindMe"
+		],
+		"client": [
+			"ttrafford.bindme.BindMeClient"
+		],
+		"fabric-datagen": [
+			"ttrafford.bindme.BindMeDataGenerator"
+		]
+	},
+	"mixins": [
+		"bindme.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.19.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
